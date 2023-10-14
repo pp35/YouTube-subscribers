@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ALMABETTER BACKEND PROJECT</h1>
+        <button id="subscriberButton">Subscribers</button>
+        <button id="subscriberNameButton">Subscriber by Name</button>
+        <button id="subscriberIdButton">Subscriber by ID</button>
+    </div>
+
+
+    <script>
+        // Get a reference to the "Subscribers" button element
+        var subscribersButton = document.getElementById("subscriberButton");
+
+        // Get a reference to the "Subscriber by Name" button element
+        var subscriberNameButton = document.getElementById("subscriberNameButton");
+
+        // Get a reference to the "Subscriber by ID" button element
+        var subscriberIdButton = document.getElementById("subscriberIdButton");
+
+        // Add a click event listener to the "Subscribers" button
+        subscribersButton.addEventListener("click", function() {
+            // Redirect to "http://localhost:3000/"
+            window.location.href = "http://localhost:3000/subscribers";
+        });
+
+        // Add a click event listener to the "Subscriber by Name" button
+        subscriberNameButton.addEventListener("click", function() {
+            // Redirect to "http://localhost:3000/subscribers/name"
+            window.location.href = "http://localhost:3000/subscribers/name";
+        });
+
+        // Add a click event listener to the "Subscriber by ID" button
+        subscriberIdButton.addEventListener("click", function() {
+            // Redirect to "http://localhost:3000/subscribers/:id" (replace :id with a specific ID)
+            var specificId = "replace_with_specific_id"; // Replace with the actual ID
+            window.location.href = "http://localhost:3000/subscribers/" + specificId;
+        });
+    </script>
+</body>
+</html>
