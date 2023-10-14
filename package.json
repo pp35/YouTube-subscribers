@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit"
+    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",
@@ -18,4 +19,5 @@
     "chai-http": "^4.3.0",
     "mocha": "^8.2.1"
   }
+  
 }
