@@ -138,13 +138,13 @@
 
             // Add a click event listener to the "Subscribers" button
             subscribersButton.addEventListener("click", function() {
-                // Redirect to "http://localhost:3000/subscribers"
+                // Redirect to "/subscribers"
                 window.location.href = "https://youtube-subscribers1.onrender.com/subscribers";
             });
 
             // Add a click event listener to the "Subscriber by Name" button
             subscriberNameButton.addEventListener("click", function() {
-                // Redirect to "http://localhost:3000/subscribers/name"
+                // Redirect to "/subscribers/name"
                 window.location.href = "https://youtube-subscribers1.onrender.com/subscribers/name";
             });
 
@@ -157,7 +157,7 @@
                 if (specificId === "") {
                     alert("Please enter an ID.");
                 } else {
-                    // Redirect to "http://localhost:3000/subscribers/:id" with the specific ID
+                    // Redirect to "/subscribers/:id" with the specific ID
                     window.location.href = "https://youtube-subscribers1.onrender.com/subscribers/" + specificId;
                 }
             });
