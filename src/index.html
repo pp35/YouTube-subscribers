@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" sizes="32*32" href="https://www.youtube.com/s/desktop/000d7185/img/favicon.ico" >
+    <link rel="icon" sizes="32*32" href="https://www.youtube.com/s/desktop/000d7185/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Subscribers</title>
     <style>
@@ -15,9 +15,8 @@
             height: 100vh;
             margin: 0;
             background-color: url(https://www.css-gradient.com/?c1=3c1bab&c2=e44283&gt=c&gd=dtl);
-           
-background: rgba(60, 27, 171, 1.0);
-background: conic-gradient(from 315deg, rgba(60, 27, 171, 1.0), rgba(228, 66, 131, 1.0));;
+            background: rgba(60, 27, 171, 1.0);
+            background: conic-gradient(from 315deg, rgba(60, 27, 171, 1.0), rgba(228, 66, 131, 1.0));
             flex-direction: column;
             text-align: center;
         }
@@ -30,7 +29,7 @@ background: conic-gradient(from 315deg, rgba(60, 27, 171, 1.0), rgba(228, 66, 13
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: url(  https://www.css-gradient.com/?c1=d4337a&c2=882997&gt=l&gd=dcc);
             background: rgba(226, 88, 149, 1.0);
-background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1.0));
+            background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1.0));
         }
 
         h1 {
@@ -88,14 +87,22 @@ background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1
             padding-left: 12rem;
         }
 
-        /* Additional styles for smaller screens */
         @media screen and (max-width: 768px) {
+            img {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
             .container {
                 padding: 20px;
             }
 
             h1 {
                 font-size: 24px;
+            }
+
+            button {
+                font-size: 14px;
             }
 
             input[type="text"] {
@@ -109,9 +116,12 @@ background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1
             .flex-container input {
                 margin: 10px 0;
                 width: 100%;
+                margin-right: 0;
             }
 
-            
+            .Subscribers {
+                padding-left: 0;
+            }
         }
     </style>
 </head>
@@ -120,7 +130,7 @@ background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1
     <img src="./Images/Logo.png" alt="AlmaBetter" style="width:20rem; margin-bottom: 20px;">
     <div class="container">
         <h1>Get YouTube Subscribers</h1>
-        
+
         <button id="subscriberButton">Subscribers</button>
         <button id="subscriberNameButton">Subscriber by Name</button>
         <div class="flex-container">
@@ -131,50 +141,37 @@ background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1
         <a href="https://github.com/pp35/YouTube-subscribers" target="_blank" style="margin-right: 10px;">
             <img src="./Images/Github.png" style="width: 5%" alt="Github Logo">
         </a>
-        
+
         <a href="https://github.com/suaib92/Get-Youtube-Subscribers" target="_blank" style="margin-right: 10px;">
             <img src="./Images/Youtube.png" style="width: 7%" alt="YouTube Logo">
         </a>
-        
+
         <a href="https://www.linkedin.com/in/poornima-pandey-15305226a/" target="_blank">
             <img src="./Images/Linkedin.png" style="width: 5%;" alt="LinkedIn Logo">
         </a>
-        
+
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Get a reference to the "Subscribers" button element
             var subscribersButton = document.getElementById("subscriberButton");
-
-            // Get a reference to the "Subscriber by Name" button element
             var subscriberNameButton = document.getElementById("subscriberNameButton");
-
-            // Get a reference to the "Subscriber by ID" button element
             var subscriberIdButton = document.getElementById("subscriberIdButton");
 
-            // Add a click event listener to the "Subscribers" button
             subscribersButton.addEventListener("click", function() {
-                // Redirect to "/subscribers"
                 window.location.href = "https://youtube-subscribers1.onrender.com/subscribers";
             });
 
-            // Add a click event listener to the "Subscriber by Name" button
             subscriberNameButton.addEventListener("click", function() {
-                // Redirect to "/subscribers/name"
                 window.location.href = "https://youtube-subscribers1.onrender.com/subscribers/name";
             });
 
-            // Add a click event listener to the "Subscriber by ID" button
             subscriberIdButton.addEventListener("click", function() {
-                // Get the value from the input field
                 var specificId = document.getElementById("subscriberIdInput").value;
 
-                // Check if the input is empty
                 if (specificId === "") {
                     alert("Please enter an ID.");
                 } else {
-                    // Redirect to "/subscribers/:id" with the specific ID
                     window.location.href = "https://youtube-subscribers1.onrender.com/subscribers/" + specificId;
                 }
             });
