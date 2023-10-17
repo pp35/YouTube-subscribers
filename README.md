@@ -1,69 +1,71 @@
-<<<<<<< HEAD
-=======
-# YouTube-subscribers
+# YouTube Subscribers API Project
 
->>>>>>> 8739ff266dcab9e455ee762cd5704cd51bcb4ac8
-YouTube Subscribers Project
+## Table of Contents
+- [Introduction](#introduction)
+- [Project Overview](#project-overview)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Database](#database)
+- [Data Refresh](#data-refresh)
+- [Contributors](#contributors)
 
-Overview:
+## Introduction
+Welcome to the YouTube Subscribers API Project! This project is designed to provide a simple API for managing and retrieving information about YouTube subscribers. It allows you to perform operations such as getting a list of subscribers, adding new subscribers, and fetching subscriber details.
 
-This project is a simple web application that allows users to get YouTube subscribers. It consists of both front-end and back-end components.
+## Project Overview
+The project consists of a Node.js application that serves as the backend for the API and a MongoDB database for storing subscriber data. The frontend is a basic HTML page that provides information about the available API endpoints.
 
-Features:
+## Technologies Used
+- Node.js
+- Express.js
+- MongoDB
+- Bootstrap (for frontend styling)
+- Mongoose (for database interaction)
 
-Get all subscribers
-Get subscribers by name
-Get subscribers by ID
-Add a new subscriber
-View subscribers' details
+## Installation
+To run this project on your local machine, follow these steps:
 
-Technologies Used:
+1. Clone the project repository from GitHub:
+    ```
+    git clone <repository-url>
+    ```
 
-HTML/CSS/JavaScript for the front-end
-Node.js and Express.js for the back-end
-MongoDB for the database
+2. Install the project dependencies by running:
+    ```
+    npm install
+    ```
 
-Setup:
+3. Ensure you have MongoDB installed and running on your local machine.
 
-Clone the repository to your local machine.
-Install the necessary packages using npm install.
-Start the server using npm start.
-Open a web browser and navigate to http://localhost:3000 to access the application.
+4. Start the application by running:
+    ```
+    node app.js
+    ```
+   The application will start and listen on port 3000. You can access the API through the provided endpoints.
 
-Usage:
+## Usage
+The API provides the following endpoints for managing YouTube subscribers:
 
-Click the "Subscribers" button to get all subscribers.
-Click the "Subscriber by Name" button to get subscribers by name.
-Enter an ID in the input field and click the "Subscriber by ID" button to get a specific subscriber.
-Fill out the form to add a new subscriber.
+### API Endpoints
+- GET /subscribers: Get a list of all subscribers.
+- POST /subscribers: Add a new subscriber.
+- GET /subscribers/name: Get a list of subscribers with only the name and subscribedChannel fields.
+- POST /subscribers/name: Add a new subscriber with name and subscribedChannel fields.
+- GET /subscribers/:id: Get details of a subscriber by their ID.
+- POST /subscribers/:id: Add a new subscriber by providing name and subscribedChannel.
+  
+  If a subscriber with the specified :id is not found, the API will return an error message with a status code of 400.
 
-API Endpoints:
+### Database
+The project uses a MongoDB database to store subscriber data. You can configure the database connection in the app.js file. The database connection URL is set in the DATABASE_URL variable.
 
-GET /subscribers - Get all subscribers
-POST /subscribers - Add a new subscriber
-GET /subscribers/name - Get subscribers by name
-POST /subscribers/name - Add a new subscriber with name and subscribed channel only
-GET /subscribers/:id - Get a subscriber by ID
-POST /subscribers/:id - Add a new subscriber with provided name and subscribed channel, given an ID
+### Data Refresh
+The project includes a data refresh feature. The `refreshAll` function in app.js clears the database and inserts a sample dataset of subscribers from the data.js file. You can use this function to reset the database with sample data.
 
-Database Schema:
+## Contributors
+- [Your Name]
+- [Your Collaborator's Name]
 
-The database contains a collection of subscribers with the following fields:
-name (String, required)
-subscribedChannel (String, required)
-subscribedDate (Date, default: current date)
-
-How to Refresh Data:
-
-To refresh the data in the database, run the refreshAll function from the index.js file. This function clears the existing data and inserts new data from the data.js file.
-
-Contributors:
-<<<<<<< HEAD
- [Poornima Pandey] 
- [Mohd Suaib Warsi]
-=======
-    
-     [Poornima Pandey] 
- 
-     [Mohd Suaib Warsi]
->>>>>>> 8739ff266dcab9e455ee762cd5704cd51bcb4ac8
+Feel free to contribute to this project or use it as a starting point for your own YouTube subscribers management application. Enjoy exploring and using this API!

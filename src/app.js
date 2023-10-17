@@ -1,15 +1,15 @@
-// Importing necessary modules
+// Import required modules
 const express = require('express');
 const app = express();
-const Subscriber = require('./models/subscribers');
+const Subscriber = require('./models/subscribers'); // Import the Subscriber model
 
 // Middleware to parse JSON requests
 app.use(express.json());
 
-// Serving static files from the current directory
+// Serve static files from the current directory
 app.use(express.static(__dirname));
 
-// Serving the index.html file when the root URL is accessed
+// Route to serve the homepage
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
@@ -24,7 +24,7 @@ app.get('/subscribers', async (req, res) => {
   }
 });
 
-// Creating a new subscriber
+// Route to create a new subscriber
 app.post('/subscribers', async (req, res) => {
   try {
     const newSubscriber = new Subscriber(req.body);
@@ -35,7 +35,7 @@ app.post('/subscribers', async (req, res) => {
   }
 });
 
-// Retrieving subscribers with only name and subscribedChannel fields
+// Route to get subscribers' names and subscribed channels
 app.get('/subscribers/name', async (req, res) => {
   try {
     const subscribers = await Subscriber.find().select('name subscribedChannel -_id');
@@ -45,7 +45,7 @@ app.get('/subscribers/name', async (req, res) => {
   }
 });
 
-// Creating a new subscriber with only name and subscribedChannel fields
+// Route to create a new subscriber with a name and subscribed channel
 app.post('/subscribers/name', async (req, res) => {
   const subscriber = new Subscriber({
     name: req.body.name,
@@ -60,20 +60,20 @@ app.post('/subscribers/name', async (req, res) => {
   }
 });
 
-// Retrieving a subscriber by their ID
+// Route to get a subscriber by their ID
 app.get('/subscribers/:id', async (req, res) => {
   try {
     const subscriber = await Subscriber.findById(req.params.id);
     if (!subscriber) {
-      return res.status(404).json({ message: 'Subscriber not found' });
+      return res.status(400).json({ message: 'Subscriber not found' });
     }
     res.json(subscriber);
   } catch (err) {
-    res.status(400).json({ message: 'Invalid ID format' });
+    res.status(400).json({ message: 'Subscriber not found' });
   }
 });
 
-// Creating a new subscriber with provided name and subscribedChannel, given an ID
+// Route to create a new subscriber with a specified ID
 app.post('/subscribers/:id', async (req, res) => {
   const { name, subscribedChannel } = req.body;
 
@@ -94,18 +94,7 @@ app.post('/subscribers/:id', async (req, res) => {
   }
 });
 
-// Middleware function to get a subscriber by ID
-app.param('id', async (req, res, next, id) => {
-  try {
-    const subscriber = await Subscriber.findById(id);
-    if (!subscriber) {
-      return res.status(404).json({ message: 'Subscriber not found' });
-    }
-    req.subscriber = subscriber;
-    next();
-  } catch (err) {
-    res.status(500).json({ message: 'Subscriber not found' });
-  }
-});
 
+
+// Export the Express app
 module.exports = app;
