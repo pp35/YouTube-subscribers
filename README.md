@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# YouTube-subscribers
+
+>>>>>>> 8739ff266dcab9e455ee762cd5704cd51bcb4ac8
 YouTube Subscribers Project
 
 Overview:
@@ -53,5 +58,12 @@ How to Refresh Data:
 To refresh the data in the database, run the refreshAll function from the index.js file. This function clears the existing data and inserts new data from the data.js file.
 
 Contributors:
+<<<<<<< HEAD
  [Poornima Pandey] 
  [Mohd Suaib Warsi]
+=======
+    
+     [Poornima Pandey] 
+ 
+     [Mohd Suaib Warsi]
+>>>>>>> 8739ff266dcab9e455ee762cd5704cd51bcb4ac8
