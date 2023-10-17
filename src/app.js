@@ -69,7 +69,7 @@ app.get('/subscribers/:id', async (req, res) => {
     }
     res.json(subscriber);
   } catch (err) {
-    res.status(400).json({ message: 'Invalid ID format' });
+    res.status(400).json({ message: 'Subscriber not found' });
   }
 });
 
