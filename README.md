@@ -55,6 +55,6 @@ How to Refresh Data:
 To refresh the data in the database, run the refreshAll function from the index.js file. This function clears the existing data and inserts new data from the data.js file.
 
 Contributors:
- [Poornima Pandey] 
+     [Poornima Pandey] 
  
- [Mohd Suaib Warsi]
+     [Mohd Suaib Warsi]
