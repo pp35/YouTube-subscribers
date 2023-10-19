@@ -233,7 +233,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: 'https://get-youtube-subscribers-8868.onrender.com/' 
+      url: 'https://get-youtube-subscribers-40mk.onrender.com/' 
     },
   ],
 };
