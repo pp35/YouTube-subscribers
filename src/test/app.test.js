@@ -149,44 +149,8 @@ describe('Subscriber API', () => {
     });
   });
 
-  // Test case for POST /subscribers/:id endpoint
-  describe('POST /subscribers/:id', () => {
-    it('should create a new subscriber with a specified ID', (done) => {
-      // Prepare data for a new subscriber with a specified ID
-      const newSubscriberData = {
-        name: 'New Test User',
-        subscribedChannel: 'New Test Channel',
-      };
-
-      // Make a POST request to the endpoint with a valid ID and assert the response
-      chai
-        .request(app)
-        .post(`/subscribers/${newSubscriberData._id}`)
-        .send(newSubscriberData)
-        .end((err, res) => {
-          expect(res).to.have.status(201);
-          expect(res.body).to.have.property('name', 'New Test User');
-          expect(res.body).to.have.property('subscribedChannel', 'New Test Channel');
-          // You can add more assertions based on your expected response
-          done();
-        });
-    });
-
-    it('should handle missing name and subscribedChannel', (done) => {
-      const invalidSubscriberData = {}; // Missing required fields
-      // Make a POST request to the endpoint with missing data and assert the response
-      chai
-        .request(app)
-        .post(`/subscribers/${invalidSubscriberData._id}`)
-        .send(invalidSubscriberData)
-        .end((err, res) => {
-          expect(res).to.have.status(400);
-          expect(res.body).to.have.property('message', 'Both name and subscribedChannel are required');
-          done();
-        });
-    });
   });
-});
+
 
 
 

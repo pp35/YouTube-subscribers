@@ -139,17 +139,21 @@
         </div>
         <h5><b> Demo id :- </b> ( 652d5b393d490241288de6ed )</h5>
         <a href="https://github.com/pp35/YouTube-subscribers" target="_blank" style="margin-right: 10px;">
-            <img src="./Images/Github.png" style="width: 5%" alt="Github Logo">
+            <img src="./Images/github-logo.png" style="width: 5%" alt="Github Logo">
         </a>
 
         <a href="https://github.com/suaib92/Get-Youtube-Subscribers" target="_blank" style="margin-right: 10px;">
-            <img src="./Images/Youtube.png" style="width: 7%" alt="YouTube Logo">
+            <img src="./Images/youtube.png" style="width: 5%" alt="YouTube Logo">
         </a>
 
         <a href="https://www.linkedin.com/in/poornima-pandey-15305226a/" target="_blank">
-            <img src="./Images/Linkedin.png" style="width: 5%;" alt="LinkedIn Logo">
+            <img src="./Images/linkedin.png" style="width: 5%;" alt="LinkedIn Logo">
         </a>
+        <br/>
 
+
+        
+        <button style="color: rgb(237, 232, 232); background-color: #0c0c0c;" id="api-docs" target="_blank">API_Doc</button>
     </div>
 
     <script>
@@ -175,6 +179,11 @@
                     window.location.href = "https://get-youtube-subscribers-8868.onrender.com/subscribers/" + specificId;
                 }
             });
+            // Add a click event listener to the "API Docs" button
+            apiDocsButton.addEventListener("click", function() {
+    // Open the API documentation link in a new tab
+    window.open("https://get-youtube-subscribers-8868.onrender.com/api-docs/", "_blank");
+});
         });
     </script>
 </body>
