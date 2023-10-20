@@ -65,7 +65,8 @@ The project uses a MongoDB database to store subscriber data. You can configure 
 The project includes a data refresh feature. The `refreshAll` function in app.js clears the database and inserts a sample dataset of subscribers from the data.js file. You can use this function to reset the database with sample data.
 
 ## Contributors
-- [Your Name]
-- [Your Collaborator's Name]
+- [Poornima Pandey]
+- [Mohammad Suaib Warsi]
+- [Ashutosh kumar]
 
 Feel free to contribute to this project or use it as a starting point for your own YouTube subscribers management application. Enjoy exploring and using this API!
